@@ -1,6 +1,6 @@
 module "my_password" {
   source = "./password-generator"
-  length = 8
+  length = 16
 }
 
 output "generated_password" {
