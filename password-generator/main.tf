@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-resource "random_password" "this" {
+resource "random_password" "secret" {
   length           = var.length
   special          = var.special
   override_special = var.override_special

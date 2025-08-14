@@ -1,6 +1,6 @@
 variable "length" {
   type        = number
-  default     = 16
+  default     = 8
   description = "Length of the password"
 }
 
