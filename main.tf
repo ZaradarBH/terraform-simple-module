@@ -1,9 +1,14 @@
-module "my_password" {
-  source = "./password-generator"
-  length = 16
+terraform {
+  required_providers {
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+  }
 }
 
-output "generated_password" {
-  value     = module.my_password.password
-  sensitive = true
+resource "random_password" "this" {
+  length           = var.length
+  special          = var.special
+  override_special = var.override_special
 }
